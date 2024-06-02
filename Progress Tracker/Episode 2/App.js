@@ -1,19 +1,5 @@
-/*
-
-<div id=parent>
-    <div id=child1>
-        <h1>I'm an h1 tag</h1>
-        <h2>I'm an h2 tag</h2>
-    </div>
-    <div id=child2>
-        <h1>I'm an h1 tag</h1>
-        <h2>I'm an h2 tag</h2>
-    </div>
-</div>
-
-ReactElement(Object) => HTML(Browser Understands)
-
-*/
+import React from "react";
+import ReactDOM from "react-dom";
 
 const parent = React.createElement("div", { id: "parent" }, [
   React.createElement("div", { id: "child1" }, [
@@ -31,3 +17,11 @@ console.log(parent); // parent -> object
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(parent);
+
+fetch("https://cryptography_assignment.gudimetla7257.workers.dev/encrypt", {
+  method: 'GET',
+  mode: 'no-cors',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+}).then(response => console.log(response));
